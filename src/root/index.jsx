@@ -12,6 +12,23 @@ import Students from '../components/students'
 import HomePage from '../components/homepage'
 import Explore from '../components/explore'
 import Subscribe from '../components/subscribe'
+import Login from '../pages/login'
+
+
+// export const root = createBrowserRouter([
+//   {
+//     path:"/",
+//     element:<Home/>
+//   },
+//   {
+//     path:"/",
+//     element:<Home/>
+//   },
+//   {
+//     path:"/",
+//     element:<Home/>
+//   },
+// ])
 const Root = () => {
   return ( <>
   <Navbar/>
@@ -26,7 +43,8 @@ const Root = () => {
     <Route path='/contact' element={<Contact/>} />
     <Route path='/users' element={<Users/>} />
     <Route path='/users/:id' element={<UserItem/>} />
-    <Route path='/dashboard/students' element={<Students/>} />
+    <Route path='/students' element={<Students/>} />
+    <Route path='/login' element={<Login/>} />
   </Routes>
   </>
   )

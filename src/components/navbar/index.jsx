@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { navbar_links } from '../../utils'
 import { FaBars } from "react-icons/fa";
 import Ytimgae from "./imges/yt.svg"
@@ -9,16 +9,18 @@ import { RiVideoAddFill } from "react-icons/ri";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { BsBell } from "react-icons/bs";
 import opa from "./imges/opa.png"
+import { FaRegUserCircle } from "react-icons/fa";
 const Navbar = () => {
     const style_links = "text-white hover:text-white"
     const {pathname} = useLocation() // qayerda turganini olib beradigan hook bu useLocation
-   
+    const navigate = useNavigate()
+    const auth = localStorage.getItem("token")
   return (
     <div className='py-3 bg-[#242424]'>
         <div className='w-[98%] m-auto flex items-center justify-between '>
             <div className='text-2xl text-white flex items-center  gap-6'>
                      <button className=' color-black '><FaBars /></button>
-                      <img src={Ytimgae} alt="" />
+                     <button onClick={()=>{navigate('/')}}><img src={Ytimgae} alt="" /></button>
             </div>
             
             <div  className='flex items-center gap-4' >
@@ -33,7 +35,8 @@ const Navbar = () => {
                <button className='bg-transparent  h-[38px] w-[38px]  rounded-[100%]  flex items-center justify-center transition-[0.2s] hover:bg-[#424242]'><RiVideoAddFill  style={{ color: 'white', fontSize: '20px' }} /></button>
                <button className='bg-transparent  h-[38px] w-[38px]  rounded-[100%]  flex items-center justify-center transition-[0.2s] hover:bg-[#424242]'> <BsFillGrid3X3GapFill  style={{ color: 'white', fontSize: '20px' }}/></button>
               <button className='bg-transparent  h-[38px] w-[38px]  rounded-[100%]  flex items-center justify-center transition-[0.2s] hover:bg-[#424242]'> <BsBell  style={{ color: 'white', fontSize: '20px' }} /></button>
-              <img src={opa} alt="" />
+              {auth?<button onClick={()=>{navigate("/login")}}><img src={opa} alt="" /></button>:<button onClick={()=>{navigate("/login")}}><FaRegUserCircle style={{fontSize:"25px",color:'white'}} /></button>}
+              
             </div>
         </div>    
      </div>
