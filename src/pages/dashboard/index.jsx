@@ -3,6 +3,7 @@ import {  Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { MdHomeFilled } from "react-icons/md";
 import { FaCompass } from "react-icons/fa6";
 import { MdOutlineSubscriptions } from "react-icons/md";
+import Navbar from '../../components/navbar';
 
 const Dashboard = () => {
   const {pathname} = useLocation()
@@ -11,6 +12,7 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Navbar/>
       <div className='flex'>
 
         <div className= 'flex flex-col  pt-[10px]  w-[300px] h-[673px] bg-[#212121]'>

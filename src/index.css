@@ -20,3 +20,16 @@ table,th,td{
   border-collapse: collapse;
   padding:10px;
 }
+.user-header{
+  background: url("https://yt3.googleusercontent.com/vSvugf2r7i-UVJpBRLKMXT8bt4YqMMxQdenrs6hVkVQPgmR0I7ufAVZic9wLPFvC6sd_frzPcQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.userFoto{
+  background: url('https://yt3.googleusercontent.com/uGLBH161KLq5FOrNW71bTsvO6ZUhpeFz8aJDmlUp69Yn0sB-EoLnll-VazeBb6i6M2AvzFKg=s160-c-k-c0x00ffffff-no-rj');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
